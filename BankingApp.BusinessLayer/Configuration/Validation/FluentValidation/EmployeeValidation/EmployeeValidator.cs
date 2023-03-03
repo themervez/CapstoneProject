@@ -12,6 +12,8 @@ namespace BankingApp.BusinessLayer.Configuration.Validation.FluentValidation.Emp
     {
         public EmployeeValidator()
         {
+            RuleFor(x => x.JobDescription).NotEmpty().WithMessage("İş tanımı alanı boş geçilemez!");
+            RuleFor(x => x.JobDescription).MinimumLength(2).WithMessage("Lütfen en az 2 karakter veri giriniz!");
         }
     }
 }

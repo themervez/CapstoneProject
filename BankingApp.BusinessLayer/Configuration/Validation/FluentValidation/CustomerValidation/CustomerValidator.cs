@@ -12,6 +12,7 @@ namespace BankingApp.BusinessLayer.Configuration.Validation.FluentValidation.Cus
     {
         public CustomerValidator()
         {
+            RuleFor(x => x.JoinDate).NotEmpty().WithMessage("Müşteri kayıt olma tarihi boş geçilemez!");
         }
     }
 }
