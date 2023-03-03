@@ -1,0 +1,15 @@
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\bin\Debug\net5.0\BankingApp.DTOLayer.deps.json
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\bin\Debug\net5.0\BankingApp.DTOLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\bin\Debug\net5.0\BankingApp.DTOLayer.pdb
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\bin\Debug\net5.0\BankingApp.EntityLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\bin\Debug\net5.0\BankingApp.EntityLayer.pdb
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.csproj.AssemblyReference.cache
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.AssemblyInfoInputs.cache
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.AssemblyInfo.cs
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.csproj.CoreCompileInputs.cache
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.csproj.CopyComplete
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\refint\BankingApp.DTOLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\BankingApp.DTOLayer.pdb
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.DTOLayer\obj\Debug\net5.0\ref\BankingApp.DTOLayer.dll

@@ -1,0 +1,15 @@
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\bin\Debug\net5.0\BankingApp.EntityLayer.deps.json
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\bin\Debug\net5.0\BankingApp.EntityLayer.runtimeconfig.json
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\bin\Debug\net5.0\BankingApp.EntityLayer.runtimeconfig.dev.json
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\bin\Debug\net5.0\BankingApp.EntityLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\bin\Debug\net5.0\BankingApp.EntityLayer.pdb
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.AssemblyInfo.cs
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\refint\BankingApp.EntityLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.pdb
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\BankingApp.EntityLayer.genruntimeconfig.cache
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.EntityLayer\obj\Debug\net5.0\ref\BankingApp.EntityLayer.dll
