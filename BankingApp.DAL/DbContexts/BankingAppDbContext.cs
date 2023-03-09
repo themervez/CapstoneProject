@@ -1,4 +1,5 @@
 ﻿using BankingApp.EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BankingApp.DAL.DbContexts
 {
-    public class BankingAppDbContext : DbContext
+    public class BankingAppDbContext : IdentityDbContext<AppUser, AppRole, int>
     {
         private IConfiguration _configuration;
         public BankingAppDbContext(IConfiguration configuration)

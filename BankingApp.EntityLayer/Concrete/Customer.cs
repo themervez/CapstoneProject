@@ -11,6 +11,7 @@ namespace BankingApp.EntityLayer.Concrete
     {
         public DateTime JoinDate { get; set; }
         public decimal AccountAmount { get; set; }
+        public string AccountIBAN { get; set; }
         public ICollection<Process> Processes { get; set; }
     }
 }

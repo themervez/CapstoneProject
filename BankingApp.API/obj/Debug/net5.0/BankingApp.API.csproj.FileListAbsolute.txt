@@ -67,3 +67,11 @@ C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\obj\Debug\net5.0\refin
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\obj\Debug\net5.0\BankingApp.API.pdb
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\obj\Debug\net5.0\BankingApp.API.genruntimeconfig.cache
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\obj\Debug\net5.0\ref\BankingApp.API.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

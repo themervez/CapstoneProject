@@ -17,6 +17,7 @@ namespace BankingApp.EntityLayer.Concrete
         public string Description { get; set; }
         public int EmployeeId { get; set; }
         public int CustomerId { get; set; }
+        public DateTime Date { get; set; }
 
         [ForeignKey("CustomerId")]
         public Customer Customer { get; set; }

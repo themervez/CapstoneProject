@@ -1,0 +1,85 @@
+﻿@model SignUpViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="Bank, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="~/BankingApp/img/favicon.png">
+
+    <title>Bank</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/BankingApp/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/BankingApp/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="~/BankingApp/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/BankingApp/css/style.css" rel="stylesheet">
+    <link href="~/BankingApp/css/style-responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="login-body">
+
+    <div class="container">
+
+        <form class="form-signin" method="post">
+            <h2 class="form-signin-heading">Hemen Kayıt Ol!</h2>
+            <div class="login-wrap">
+                <input type="text" class="form-control" placeholder="Adınız" asp-for="Name" autofocus>
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+                <input type="text" class="form-control" placeholder="Soyadınız" asp-for="Surname" autofocus>
+                <span asp-validation-for="Surname" class="text-danger"></span>
+
+                <input type="text" class="form-control" placeholder="E-mail" asp-for="Email" autofocus>
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+                <input type="text" class="form-control" placeholder="Telefon" asp-for="PhoneNumber" autofocus>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+                <input type="text" class="form-control" placeholder="Şehir" asp-for="City" autofocus>
+                <span asp-validation-for="City" class="text-danger"></span>
+
+                <div class="radios">
+                    <label class="label_radio col-lg-6 col-sm-6" >
+                        <input name="Gender"  value="Erkek" type="radio"  /> Erkek
+                    </label>
+                    <label class="label_radio col-lg-6 col-sm-6" >
+                        <input name="Gender"  value="Erkek" type="radio" checked /> Kadın
+                    </label>
+                </div>
+
+                <p>Kullanıcı hesap bilgilerinizi giriniz</p>
+                <input type="text" class="form-control" placeholder="Kullanıcı Adınız" asp-for="UserName" autofocus>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+
+                <input type="password" class="form-control" placeholder="Şifre" asp-for="Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+                <input type="password" class="form-control" placeholder="Şifre Tekrar" asp-for="ConfirmPassword">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+                <label class="checkbox">
+                    <input type="checkbox" value="şartları kabul et"> Hizmet Koşullarını ve Gizlilik Politikasını kabul ediyorum.
+                </label>
+                <button class="btn btn-lg btn-login btn-block" type="submit">Kayıt Ol</button>
+
+                <div class="registration">
+                    Zaten Üye misin?
+                    @Html.ActionLink("Oturum Aç","SignIn","Login")
+                </div>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div> @*Bütün hataları göstermek için kullandık*@
+        </form>
+    </div>
+</body>
+</html>
+
