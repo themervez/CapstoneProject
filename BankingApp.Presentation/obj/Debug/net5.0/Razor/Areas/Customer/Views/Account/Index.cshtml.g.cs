@@ -35,13 +35,13 @@ using BankingApp.EntityLayer.Concrete;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\Areas\Customer\Views\_ViewImports.cshtml"
-using BankingApp.Presentation.Areas.Customer.Models;
+using BankingApp.DTOLayer.DTOs.CustomerDTOs;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da5e4868deec4ebbab22f6335698a8c09712d919", @"/Areas/Customer/Views/Account/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4a2b5bc2e08100c8aa44224a464b885791554a3f", @"/Areas/Customer/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f081dd16384bd5413fe0ef447c0728cc7f64d232", @"/Areas/Customer/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Customer_Views_Account_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

@@ -15,14 +15,15 @@ namespace BankingApp.EntityLayer.Concrete
         public string ProcessName { get; set; }
         public string ProcessBranch { get; set; }
         public string Description { get; set; }
-        public int EmployeeId { get; set; }
+        public int AppUserId { get; set; }
         public int CustomerId { get; set; }
         public DateTime Date { get; set; }
 
-        [ForeignKey("CustomerId")]
-        public Customer Customer { get; set; }
+        [ForeignKey("AppUserId")]
+        public AppUser AppUser { get; set; }
 
-        [ForeignKey("EmployeeId")]
-        public Employee Employee { get; set; }
+        //[ForeignKey("CustomerId")]
+        //public Customer CustomerI { get; set; }
+
     }
 }

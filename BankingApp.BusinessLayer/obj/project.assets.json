@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "AutoMapper/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FluentValidation/11.2.1": {
         "type": "package",
         "compile": {
@@ -2307,6 +2323,19 @@
           "bin/placeholder/BankingApp.DAL.dll": {}
         }
       },
+      "BankingApp.DTOLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BankingApp.EntityLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BankingApp.DTOLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankingApp.DTOLayer.dll": {}
+        }
+      },
       "BankingApp.EntityLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2326,6 +2355,21 @@
     }
   },
   "libraries": {
+    "AutoMapper/12.0.1": {
+      "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "type": "package",
+      "path": "automapper/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.12.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.dll",
+        "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
     "FluentValidation/11.2.1": {
       "sha512": "ZrQD0TGd0mHqf/zErZOEaba8cBeInaJj02nqinO+0La3uE08sJ5ScTYqsCbdx9fLHsX8rh+5KH5RtL2eOUS+OA==",
       "type": "package",
@@ -7095,6 +7139,11 @@
       "path": "../BankingApp.DAL/BankingApp.DAL.csproj",
       "msbuildProject": "../BankingApp.DAL/BankingApp.DAL.csproj"
     },
+    "BankingApp.DTOLayer/1.0.0": {
+      "type": "project",
+      "path": "../BankingApp.DTOLayer/BankingApp.DTOLayer.csproj",
+      "msbuildProject": "../BankingApp.DTOLayer/BankingApp.DTOLayer.csproj"
+    },
     "BankingApp.EntityLayer/1.0.0": {
       "type": "project",
       "path": "../BankingApp.EntityLayer/BankingApp.EntityLayer.csproj",
@@ -7103,7 +7152,9 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AutoMapper >= 12.0.1",
       "BankingApp.DAL >= 1.0.0",
+      "BankingApp.DTOLayer >= 1.0.0",
       "BankingApp.EntityLayer >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.2.2",
       "Microsoft.EntityFrameworkCore >= 5.0.17",
@@ -7147,6 +7198,9 @@
             "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DAL\\BankingApp.DAL.csproj": {
               "projectPath": "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DAL\\BankingApp.DAL.csproj"
             },
+            "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DTOLayer\\BankingApp.DTOLayer.csproj": {
+              "projectPath": "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DTOLayer\\BankingApp.DTOLayer.csproj"
+            },
             "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.EntityLayer\\BankingApp.EntityLayer.csproj": {
               "projectPath": "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.EntityLayer\\BankingApp.EntityLayer.csproj"
             }
@@ -7163,6 +7217,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.1, )"
+          },
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.2.2, )"

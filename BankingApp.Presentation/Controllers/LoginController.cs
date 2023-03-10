@@ -1,4 +1,5 @@
-﻿using BankingApp.EntityLayer.Concrete;
+﻿using BankingApp.DTOLayer.DTOs.AppUserDTOs;
+using BankingApp.EntityLayer.Concrete;
 using BankingApp.Presentation.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -25,7 +26,7 @@ namespace BankingApp.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SignIn(SignInViewModel p)
+        public async Task<IActionResult> SignIn(SignInDTO p)
         {
             if (ModelState.IsValid)
             {

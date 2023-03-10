@@ -18,3 +18,5 @@ C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.BusinessLayer\obj\Debug\ne
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.BusinessLayer\obj\Debug\net5.0\BankingApp.BusinessLayer.pdb
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.BusinessLayer\obj\Debug\net5.0\BankingApp.BusinessLayer.genruntimeconfig.cache
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.BusinessLayer\obj\Debug\net5.0\ref\BankingApp.BusinessLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.BusinessLayer\bin\Debug\net5.0\BankingApp.DTOLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.BusinessLayer\bin\Debug\net5.0\BankingApp.DTOLayer.pdb

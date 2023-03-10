@@ -35,6 +35,9 @@
               "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DAL\\BankingApp.DAL.csproj": {
                 "projectPath": "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DAL\\BankingApp.DAL.csproj"
               },
+              "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DTOLayer\\BankingApp.DTOLayer.csproj": {
+                "projectPath": "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.DTOLayer\\BankingApp.DTOLayer.csproj"
+              },
               "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.EntityLayer\\BankingApp.EntityLayer.csproj": {
                 "projectPath": "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.EntityLayer\\BankingApp.EntityLayer.csproj"
               }
@@ -51,6 +54,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.2.2, )"
@@ -394,6 +401,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.2.2, )"

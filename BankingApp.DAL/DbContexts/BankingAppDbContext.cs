@@ -17,8 +17,8 @@ namespace BankingApp.DAL.DbContexts
         {
             _configuration = configuration;
         }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Employee> Employees { get; set; }
+        //public DbSet<Customer> Customers { get; set; }
+        //public DbSet<Employee> Employees { get; set; }
         public DbSet<Process> Processes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

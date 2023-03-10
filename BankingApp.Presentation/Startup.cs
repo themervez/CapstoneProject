@@ -1,6 +1,9 @@
-using BankingApp.BusinessLayer.Configuration.Validation.FluentValidation.CustomValidations;
+using BankingApp.BusinessLayer.Configuration.DIContainer;
+using BankingApp.BusinessLayer.Configuration.Mapper;
+using BankingApp.BusinessLayer.Configuration.Validation.CustomValidations;
 using BankingApp.DAL.DbContexts;
 using BankingApp.EntityLayer.Concrete;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,13 +28,23 @@ namespace BankingApp.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ContainerDependencies();//DI
+
             services.AddDbContext<BankingAppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("ConStr"));
             });
+
+            services.AddAutoMapper(config =>
+            {
+                config.AddProfile(new MapperProfile());//AutoMapper configuration
+            });
+
             services.AddIdentity<AppUser, AppRole>().AddErrorDescriber<CustomIdentityErrorValidator>().AddEntityFrameworkStores<BankingAppDbContext>();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddFluentValidation();
+
+            services.CustomizeValidator();
 
             services.AddMvc(config => /*Authorization*/
             {

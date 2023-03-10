@@ -171,3 +171,9 @@ C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\obj\Debug\net
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\obj\Debug\net5.0\Razor\Areas\Customer\Views\Account\Index.cshtml.g.cs
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\obj\Debug\net5.0\Razor\Areas\Customer\Views\CustomerProfile\Index.cshtml.g.cs
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\obj\Debug\net5.0\Razor\Areas\Customer\Views\_ViewImports.cshtml.g.cs
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

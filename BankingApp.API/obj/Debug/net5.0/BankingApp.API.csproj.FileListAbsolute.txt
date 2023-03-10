@@ -75,3 +75,5 @@ C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Micro
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\BankingApp.DTOLayer.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.API\bin\Debug\net5.0\BankingApp.DTOLayer.pdb

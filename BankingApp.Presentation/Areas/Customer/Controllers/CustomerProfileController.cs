@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using BankingApp.Presentation.Areas.Customer.Models;
+using BankingApp.DTOLayer.DTOs.CustomerDTOs;
 
 namespace BankingApp.Presentation.Areas.Customer.Controllers
 {
@@ -23,16 +23,17 @@ namespace BankingApp.Presentation.Areas.Customer.Controllers
         public async Task<IActionResult> Index()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
-            ProfileViewModel profileView = new ProfileViewModel();
-            profileView.Name = values.Name;
-            profileView.Surname = values.Surname;
-            profileView.PhoneNumber = values.PhoneNumber;
-            profileView.Email = values.Email;
-            return View(profileView);
+            ProfileUpdateDTO profileUpdate = new ProfileUpdateDTO();
+            profileUpdate.Name = values.Name;
+            profileUpdate.Surname = values.Surname;
+            profileUpdate.UserName = values.UserName;
+            profileUpdate.PhoneNumber = values.PhoneNumber;
+            profileUpdate.Email = values.Email;
+            return View(profileUpdate);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(ProfileViewModel p)
+        public async Task<IActionResult> Index(ProfileUpdateDTO p)
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
             if (p.Image != null)
@@ -48,6 +49,7 @@ namespace BankingApp.Presentation.Areas.Customer.Controllers
             values.Name = p.Name;
             values.Surname = p.Surname;
             values.Email = p.Email;
+            values.UserName = p.UserName;
             values.PhoneNumber = p.PhoneNumber;
             values.PasswordHash = _userManager.PasswordHasher.HashPassword(values, p.Password);
 

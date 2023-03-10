@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1DoZ7VuJtoGP1I8U9MFh8RAfdLz1Scr8liTnTQKn82VSDYsa/W4yUhnmPW/7eGXiSNEtQp7N1O9y674CYLq5Lw==",
+  "dgSpecHash": "KWUMB/H5ewwLXpHWeyQ7SxnEZnh1XOStQuKRfJeGM8DKMds+Cjr4ZmsMsdc+MjwnlFAE4/8aZWuMjke6ASsaTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Merve\\Documents\\GitHub\\BankingApp\\BankingApp.BusinessLayer\\BankingApp.BusinessLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Merve\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Merve\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
     "C:\\Users\\Merve\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "C:\\Users\\Merve\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",

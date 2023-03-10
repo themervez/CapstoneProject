@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System;
 using Microsoft.AspNetCore.Authorization;
 using BankingApp.Presentation.Models;
+using BankingApp.DTOLayer.DTOs.AppUserDTOs;
 
 namespace BankingApp.Presentation.Controllers
 {
@@ -25,7 +26,7 @@ namespace BankingApp.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SignUp(SignUpViewModel p)
+        public async Task<IActionResult> SignUp(SignUpDTO p)
         {
             if (ModelState.IsValid)//Eğer model geçerli ise işleme devam etmek için
             {

@@ -58,6 +58,15 @@ namespace BankingApp.DAL.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("AccountAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("AccountIBAN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BankBranch")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
@@ -77,6 +86,12 @@ namespace BankingApp.DAL.Migrations
 
                     b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("JoinDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -107,6 +122,9 @@ namespace BankingApp.DAL.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Surname")
                         .HasColumnType("nvarchar(max)");
 
@@ -130,84 +148,6 @@ namespace BankingApp.DAL.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("BankingApp.EntityLayer.Concrete.Customer", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<decimal>("AccountAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("AccountIBAN")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BankBranch")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("JoinDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Surname")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("BankingApp.EntityLayer.Concrete.Employee", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("BankBranch")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JobDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Surname")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Employees");
-                });
-
             modelBuilder.Entity("BankingApp.EntityLayer.Concrete.Process", b =>
                 {
                     b.Property<int>("ID")
@@ -215,7 +155,7 @@ namespace BankingApp.DAL.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CustomerId")
+                    b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
@@ -223,9 +163,6 @@ namespace BankingApp.DAL.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int");
 
                     b.Property<string>("ProcessBranch")
                         .HasColumnType("nvarchar(max)");
@@ -235,9 +172,7 @@ namespace BankingApp.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("CustomerId");
-
-                    b.HasIndex("EmployeeId");
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("Processes");
                 });
@@ -345,21 +280,13 @@ namespace BankingApp.DAL.Migrations
 
             modelBuilder.Entity("BankingApp.EntityLayer.Concrete.Process", b =>
                 {
-                    b.HasOne("BankingApp.EntityLayer.Concrete.Customer", "Customer")
+                    b.HasOne("BankingApp.EntityLayer.Concrete.AppUser", "AppUser")
                         .WithMany("Processes")
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BankingApp.EntityLayer.Concrete.Employee", "Employee")
-                        .WithMany("Processes")
-                        .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-
-                    b.Navigation("Employee");
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -413,12 +340,7 @@ namespace BankingApp.DAL.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BankingApp.EntityLayer.Concrete.Customer", b =>
-                {
-                    b.Navigation("Processes");
-                });
-
-            modelBuilder.Entity("BankingApp.EntityLayer.Concrete.Employee", b =>
+            modelBuilder.Entity("BankingApp.EntityLayer.Concrete.AppUser", b =>
                 {
                     b.Navigation("Processes");
                 });

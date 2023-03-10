@@ -1596,6 +1596,7 @@
       "BankingApp.BusinessLayer/1.0.0": {
         "dependencies": {
           "BankingApp.DAL": "1.0.0",
+          "BankingApp.DTOLayer": "1.0.0",
           "BankingApp.EntityLayer": "1.0.0",
           "FluentValidation.AspNetCore": "11.2.2",
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -1621,6 +1622,17 @@
         },
         "compile": {
           "BankingApp.DAL.dll": {}
+        }
+      },
+      "BankingApp.DTOLayer/1.0.0": {
+        "dependencies": {
+          "BankingApp.EntityLayer": "1.0.0"
+        },
+        "runtime": {
+          "BankingApp.DTOLayer.dll": {}
+        },
+        "compile": {
+          "BankingApp.DTOLayer.dll": {}
         }
       },
       "BankingApp.EntityLayer/1.0.0": {
@@ -4230,6 +4242,11 @@
       "sha512": ""
     },
     "BankingApp.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankingApp.DTOLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
