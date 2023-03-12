@@ -6,17 +6,20 @@ using System;
 using Microsoft.AspNetCore.Authorization;
 using BankingApp.Presentation.Models;
 using BankingApp.DTOLayer.DTOs.AppUserDTOs;
+using System.Net.Mail;
+using BankingApp.BusinessLayer.Features.Abstract;
 
 namespace BankingApp.Presentation.Controllers
 {
-    [AllowAnonymous]
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly IEmailService _emailService;
 
-        public RegisterController(UserManager<AppUser> userManager)
+        public RegisterController(UserManager<AppUser> userManager, IEmailService emailService)
         {
             _userManager = userManager;
+            _emailService = emailService;
         }
 
         [HttpGet]
@@ -37,8 +40,9 @@ namespace BankingApp.Presentation.Controllers
                     Surname = p.Surname,
                     Email = p.Email,
                     PhoneNumber = p.PhoneNumber,
-                    City=p.City,
-                    Gender=p.Gender
+                    City = p.City,
+                    Gender = p.Gender,
+                    EmailCode = new Random().Next(10000, 1000000).ToString()
                 };
 
                 if (p.Password == p.ConfirmPassword)
@@ -46,7 +50,9 @@ namespace BankingApp.Presentation.Controllers
                     var result = await _userManager.CreateAsync(appUser, p.Password);
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("SignIn", "Login");
+                        _emailService.SendEmailAsync(appUser.Email, appUser.EmailCode);
+                        return RedirectToAction("EmailConfirmed", "Register");
+                        //return RedirectToAction("SignIn", "Login");
                     }
                     else
                     {
@@ -63,5 +69,27 @@ namespace BankingApp.Presentation.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public IActionResult EmailConfirmed()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EmailConfirmed(AppUser appUser)
+        {
+            var user = await _userManager.FindByEmailAsync(appUser.Email);
+            if (user.EmailCode == appUser.EmailCode)
+            {
+                user.EmailConfirmed = true;
+
+                await _userManager.UpdateAsync(user);
+                return RedirectToAction("SignIn", "Login");
+            }
+
+            return View();
+        }
+ 
     }
 }

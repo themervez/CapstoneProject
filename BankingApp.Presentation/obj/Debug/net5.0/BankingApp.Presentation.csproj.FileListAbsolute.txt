@@ -177,3 +177,6 @@ C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\obj\Debug\net5.0\Razor\Views\Login\ForgotPassword.cshtml.g.cs
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\obj\Debug\net5.0\Razor\Views\Login\ResetPasswordAsync.cshtml.g.cs
+C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\obj\Debug\net5.0\Razor\Views\Register\EmailConfirmed.cshtml.g.cs

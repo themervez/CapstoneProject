@@ -1,0 +1,22 @@
+﻿@model AppUser
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <form method="post">
+            <br />
+            <br />
+            <h2>E-mail Onayı</h2>
+            <hr />
+            <label>E-mail</label>
+            <input type="text" asp-for="Email" class="form-control" />
+            <br />
+            <label>E-mail Onay Kodu</label>
+            <input type="text" asp-for="EmailCode" class="form-control" />
+            <br />
+            <button type="submit" class="btn btn-success">Gönder</button>
+        </form>
+    </div>
+</div>

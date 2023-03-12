@@ -1,37 +1,69 @@
 ﻿@model ProfileUpdateDTO
-
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_CustomerLayout.cshtml";
 }
-<h1>Profil Güncelleme Sayfası</h1>
-<br />
-<form method="post" class="form-group" enctype="multipart/form-data">
-    @*enctype:Dosya ekleme işlemleri için*@
-    <div class="col-8">
-        <label>Adınız:</label>
-        <input type="text" asp-for="Name" class="form-control"/>
-        <br />
-        <label>Soyadınız:</label>
-        <input type="text" asp-for="Surname" class="form-control"/>
-        <br />
-        <label>E-mail:</label>
-        <input type="email" asp-for="Email" class="form-control"/>
-        <br />
-        <label>Telefon Numarası:</label>
-        <input type="text" asp-for="PhoneNumber" class="form-control"/>
-        <br />
-        <label>Şifreniz:</label>
-        <input type="password" asp-for="Password" class="form-control" />
-        <br />
-        <label>Şifre Tekrar:</label>
-        <input type="password" asp-for="ConfirmPassword" class="form-control"/>
-        <br />
-        <label>Resim Seçiniz:</label>
-        <input type="file" asp-for="Image" class="form-control" style="display:inline-block; inline-size:300px" />
-        <br />
-        <br />
-        <button class="btn btn-success" style="display:inline-block; inline-size:200px">Kaydet</button>
+<div class="row">
+    <div class="col-lg-6">
+        <section class="panel">
+            <header class="panel-heading">
+                Profil Güncelleme Sayfası
+            </header>
+            <div class="panel-body">
+                <form method="post" enctype="multipart/form-data">
+                    @*enctype:Dosya ekleme işlemleri için*@
+                    <div class="form-group">
+                        <label>Adınız:</label>
+                        <input type="text" asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label>Soyadınız:</label>
+                        <input type="text" asp-for="Surname" class="form-control" />
+                        <span asp-validation-for="Surname" class="text-danger"></span>
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail:</label>
+                        <input type="email" asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label>Kullanıcı Adınız:</label>
+                        <input type="text" asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon Numarası:</label>
+                        <input type="text" asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label>Şifreniz:</label>
+                        <input type="password" asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre Tekrar:</label>
+                        <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label>Resim Seçiniz:</label>
+                        <input type="file" asp-for="Image">
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-info">Kaydet</button>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </form>
+            </div>
+        </section>
     </div>
-</form>
+</div>
 

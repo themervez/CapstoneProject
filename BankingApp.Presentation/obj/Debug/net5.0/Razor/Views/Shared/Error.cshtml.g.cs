@@ -28,20 +28,27 @@ using BankingApp.Presentation.Models;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\Views\_ViewImports.cshtml"
-using BankingApp.EntityLayer.Concrete;
+using BankingApp.Presentation.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\Views\_ViewImports.cshtml"
+using BankingApp.EntityLayer.Concrete;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Merve\Documents\GitHub\BankingApp\BankingApp.Presentation\Views\_ViewImports.cshtml"
 using BankingApp.DTOLayer.DTOs.AppUserDTOs;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"025c02b126454ed186218782252215197df9cbb8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c85722766417f9d63c8b75441391c8819c89f0f8", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     #nullable disable

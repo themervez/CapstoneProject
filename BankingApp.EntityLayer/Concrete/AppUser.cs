@@ -20,6 +20,7 @@ namespace BankingApp.EntityLayer.Concrete
         public decimal AccountAmount { get; set; }
         public string AccountIBAN { get; set; }
         public bool Status { get; set; }
+        public string EmailCode { get; set; }
 
         public ICollection<Process> Processes { get; set; }
     }

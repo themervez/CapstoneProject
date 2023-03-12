@@ -22,8 +22,10 @@ namespace BankingApp.BusinessLayer.Configuration.DIContainer
     {
         public static void ContainerDependencies(this IServiceCollection services)
         {
+            //Her requestte yenilenmesi için AddScoped tercih edildi
             services.AddScoped<IProcessService, ProcessService>();
             services.AddScoped<IProcessDAL, EFProcessDAL>();
+            services.AddScoped<IEmailService, EmailService>();
         }
         public static void CustomizeValidator(this IServiceCollection services)
         {

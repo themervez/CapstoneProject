@@ -9,6 +9,14 @@ namespace BankingApp.BusinessLayer.Configuration.Validation.CustomValidations
 {
     public class CustomIdentityErrorValidator : IdentityErrorDescriber
     {
+        public override IdentityError InvalidUserName(string userName)
+        {
+            return new IdentityError()
+            {
+                Code = "InvalidUserName",
+                Description = $"{userName}, Kullanıcı adı olarak geçersizdir!"
+            };
+        }
         public override IdentityError PasswordTooShort(int length)
         {
             return new IdentityError()
